@@ -58,7 +58,7 @@ def fire_mission_v32_stable():
     
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=True) 
-        context = browser.new_context(storage_state="DY_COOKIE")
+        context = browser.new_context(storage_state="auth.json")
         page = context.new_page()
         
         print(f"🚀 启动自动续火稳健版...")
