@@ -57,7 +57,7 @@ def fire_mission_v32_stable():
     processed_names = set() 
     
     with sync_playwright() as p:
-        browser = p.chromium.launch(headless=False) 
+        browser = p.chromium.launch(headless=True) 
         context = browser.new_context(storage_state="DY_COOKIE")
         page = context.new_page()
         
